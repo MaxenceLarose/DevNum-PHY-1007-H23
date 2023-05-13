@@ -104,6 +104,8 @@ class ElectricalComponent:
 
     def evaluate_parametric_equations(self, values: np.ndarray) -> np.ndarray:
         """Evaluates the parametric equations at the given values. The values are given as a numpy array."""
+        values = np.round(values, 4)
+
         subs = {
             self._variables[0]: values[0],
             self._variables[1]: values[1]
